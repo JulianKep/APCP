@@ -1,17 +1,14 @@
 import math
 
 Slices, Rings, Radius = map(float, input().split())
-ax, ay, bx, by = map(float, input().split())
+a_s, a_r, b_s, b_r = map(float, input().split())
 
-distance = Radius / Rings
+segment_len = Radius / Rings
 
-option1 = distance * ax + distance * bx
+option1 = (a_r + b_r) * segment_len
 
-winkel = Slices * 2 / abs(ay - by)
+small_radius = min(a_r, b_r) * segment_len
 
-
-
-option2 = 2 * math.pi * winkel
-
+option2 = abs(a_r - b_r) * segment_len + (2 * math.pi * small_radius * abs(a_s - b_s) / (2 * Slices + 1))
 
 print(min(option1, option2))
