@@ -2,9 +2,10 @@
 using namespace std;
 
 int main() {
-    while (true) {
-        int num_examples;
-        cin >> num_examples;
+    int num_examples = 0;
+    while (cin >> num_examples) {
+/*         int num_examples;
+        cin >> num_examples; */
 
         if (num_examples == 0)
             break;
