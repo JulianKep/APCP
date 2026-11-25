@@ -13,3 +13,9 @@ for _ in range(first_line[0]):
     print(next(inputs))
     
     sys.stdout.write("test\n")
+
+
+
+
+
+@LRU cache
